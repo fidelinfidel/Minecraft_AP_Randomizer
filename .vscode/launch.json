@@ -1,0 +1,65 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "runClient",
+      "request": "launch",
+      "mainClass": "net.minecraftforge.bootstrap.ForgeBootstrap",
+      "projectName": "Minecraft_AP_Randomizer",
+      "cwd": "${workspaceFolder}\\run",
+      "vmArgs": "-Dforge.logging.console.level\u003ddebug -Dmixin.dumpTargetOnFailure\u003dtrue -Dforge.logging.markers\u003dREGISTRIES \"-Dnet.minecraftforge.gradle.GradleStart.srg.srg-mcp\u003dC:\\Users\\tfryg\\Desktop\\Minecraft AP Mod\\Minecraft_AP_Randomizer\\build\\createSrgToMcp\\output.srg\" -Dmixin.env.remapRefMap\u003dtrue \"-Dmixin.env.refMapRemappingFile\u003dC:\\Users\\tfryg\\Desktop\\Minecraft AP Mod\\Minecraft_AP_Randomizer\\build\\createSrgToMcp\\output.srg\" -Dforge.enabledGameTestNamespaces\u003daprandomizer -Dforge.enableGameTest\u003dtrue -Dmixin.debug.verbose\u003dtrue -Dmixin.debug.export\u003dtrue -Djava.net.preferIPv6Addresses\u003dsystem -XX:HeapDumpPath\u003dMojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -Xmx4g",
+      "args": "--launchTarget forge_userdev_client --version MOD_DEV --assetIndex 12 --assetsDir C:\\Users\\tfryg\\.gradle\\caches\\forge_gradle\\assets --gameDir . --mixin.config mixins.aprandomizer.json",
+      "env": {
+        "MOD_CLASSES": "${workspaceFolder}\\build\\sourcesSets\\main",
+        "MCP_MAPPINGS": "official_1.20.4"
+      },
+      "preLaunchTask": "prepareRunClientCompile"
+    },
+    {
+      "type": "java",
+      "name": "runData",
+      "request": "launch",
+      "mainClass": "net.minecraftforge.bootstrap.ForgeBootstrap",
+      "projectName": "Minecraft_AP_Randomizer",
+      "cwd": "${workspaceFolder}\\run-data",
+      "vmArgs": "-Dforge.logging.console.level\u003ddebug -Dmixin.dumpTargetOnFailure\u003dtrue -Dforge.logging.markers\u003dREGISTRIES \"-Dnet.minecraftforge.gradle.GradleStart.srg.srg-mcp\u003dC:\\Users\\tfryg\\Desktop\\Minecraft AP Mod\\Minecraft_AP_Randomizer\\build\\createSrgToMcp\\output.srg\" -Dmixin.env.remapRefMap\u003dtrue \"-Dmixin.env.refMapRemappingFile\u003dC:\\Users\\tfryg\\Desktop\\Minecraft AP Mod\\Minecraft_AP_Randomizer\\build\\createSrgToMcp\\output.srg\" -Dmixin.debug.verbose\u003dtrue -Dmixin.debug.export\u003dtrue -Djava.net.preferIPv6Addresses\u003dsystem",
+      "args": "--launchTarget forge_userdev_data --assetIndex 12 --assetsDir C:\\Users\\tfryg\\.gradle\\caches\\forge_gradle\\assets --gameDir . --mod aprandomizer --all --output \"C:\\Users\\tfryg\\Desktop\\Minecraft AP Mod\\Minecraft_AP_Randomizer\\src\\generated\\resources\" --existing \"C:\\Users\\tfryg\\Desktop\\Minecraft AP Mod\\Minecraft_AP_Randomizer\\src\\main\\resources\" --mixin.config mixins.aprandomizer.json",
+      "env": {
+        "MOD_CLASSES": "${workspaceFolder}\\build\\sourcesSets\\main",
+        "MCP_MAPPINGS": "official_1.20.4"
+      },
+      "preLaunchTask": "prepareRunDataCompile"
+    },
+    {
+      "type": "java",
+      "name": "runGameTestServer",
+      "request": "launch",
+      "mainClass": "net.minecraftforge.bootstrap.ForgeBootstrap",
+      "projectName": "Minecraft_AP_Randomizer",
+      "cwd": "${workspaceFolder}\\run",
+      "vmArgs": "-Dforge.logging.console.level\u003ddebug -Dmixin.dumpTargetOnFailure\u003dtrue -Dforge.logging.markers\u003dREGISTRIES \"-Dnet.minecraftforge.gradle.GradleStart.srg.srg-mcp\u003dC:\\Users\\tfryg\\Desktop\\Minecraft AP Mod\\Minecraft_AP_Randomizer\\build\\createSrgToMcp\\output.srg\" -Dmixin.env.remapRefMap\u003dtrue \"-Dmixin.env.refMapRemappingFile\u003dC:\\Users\\tfryg\\Desktop\\Minecraft AP Mod\\Minecraft_AP_Randomizer\\build\\createSrgToMcp\\output.srg\" -Dforge.enabledGameTestNamespaces\u003daprandomizer -Dmixin.debug.verbose\u003dtrue -Dmixin.debug.export\u003dtrue -Djava.net.preferIPv6Addresses\u003dsystem",
+      "args": "--launchTarget forge_userdev_server_gametest --gameDir . --mixin.config mixins.aprandomizer.json",
+      "env": {
+        "MOD_CLASSES": "${workspaceFolder}\\build\\sourcesSets\\main",
+        "MCP_MAPPINGS": "official_1.20.4"
+      },
+      "preLaunchTask": "prepareRunGameTestServerCompile"
+    },
+    {
+      "type": "java",
+      "name": "runServer",
+      "request": "launch",
+      "mainClass": "net.minecraftforge.bootstrap.ForgeBootstrap",
+      "projectName": "Minecraft_AP_Randomizer",
+      "cwd": "${workspaceFolder}\\run",
+      "vmArgs": "-Dforge.logging.console.level\u003ddebug -Dmixin.dumpTargetOnFailure\u003dtrue -Dforge.logging.markers\u003dREGISTRIES \"-Dnet.minecraftforge.gradle.GradleStart.srg.srg-mcp\u003dC:\\Users\\tfryg\\Desktop\\Minecraft AP Mod\\Minecraft_AP_Randomizer\\build\\createSrgToMcp\\output.srg\" -Dmixin.env.remapRefMap\u003dtrue \"-Dmixin.env.refMapRemappingFile\u003dC:\\Users\\tfryg\\Desktop\\Minecraft AP Mod\\Minecraft_AP_Randomizer\\build\\createSrgToMcp\\output.srg\" -Dforge.enabledGameTestNamespaces\u003daprandomizer -Dforge.enableGameTest\u003dtrue -Dmixin.debug.verbose\u003dtrue -Dmixin.debug.export\u003dtrue -Djava.net.preferIPv6Addresses\u003dsystem",
+      "args": "--launchTarget forge_userdev_server --gameDir . --nogui --mixin.config mixins.aprandomizer.json",
+      "env": {
+        "MOD_CLASSES": "${workspaceFolder}\\build\\sourcesSets\\main",
+        "MCP_MAPPINGS": "official_1.20.4"
+      },
+      "preLaunchTask": "prepareRunServerCompile"
+    }
+  ]
+}

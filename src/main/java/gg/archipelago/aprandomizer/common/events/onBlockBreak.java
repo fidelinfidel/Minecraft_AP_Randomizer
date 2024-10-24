@@ -8,17 +8,27 @@ import net.minecraftforge.fml.common.Mod;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+
 @Mod.EventBusSubscriber
 public class onBlockBreak {
 
     // Directly reference a log4j logger.
     private static final Logger LOGGER = LogManager.getLogger();
 
+    
     @SubscribeEvent
     static void onPlayerBlockInteract(BlockEvent.BreakEvent event) {
-        if(!APRandomizer.isJailPlayers())
-            return;
-        event.setCanceled(true);
-        event.getPlayer().sendSystemMessage(Component.literal("No!"));
+        
+        
+        if(APRandomizer.isJailPlayers())
+        {
+            event.setCanceled(true);
+            event.getPlayer().sendSystemMessage(Component.literal("No!"));
+        }
+        else
+        {            
+            //Good Place to beeeeee
+            
+        }
     }
 }
